@@ -3,7 +3,7 @@ const $board = $('#board');
 var ROWS = 12
 var COLS = 12;
 
-// Võrku tekkitamine
+// Võrgu tekkitamine
 function createBoard(rows, cols) {
   $board.empty();
   for (let i = 0; i < rows; i++) {
@@ -26,15 +26,19 @@ function restart() {
   createBoard(ROWS, COLS);
 }
 
+function newGame(){
+  restart();
+  document.getElementById('result').innerHTML = " ";
+}
+
 // Mängu lõpp
 function gameOver(isWin) {
-  let message = null;
   let icon = null;
   if (isWin) {
-    message = 'YOU WON!';
+    document.getElementById('result').innerHTML = "YOU WON!";
     icon = 'fa fa-flag';
   } else {
-    message = 'YOU LOST!';
+    document.getElementById('result').innerHTML = "YOU LOST!";
     icon = 'fa fa-bomb';
   }
   $('.col.mine').append(
@@ -50,10 +54,6 @@ function gameOver(isWin) {
       return count === 0 ? '' : count;
     })
   $('.col.hidden').removeClass('hidden');
-  setTimeout(function() {
-    alert(message);
-    restart();
-  }, 1000);
 }
 
 function reveal(oi, oj) {

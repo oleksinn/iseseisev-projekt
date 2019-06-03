@@ -8,6 +8,29 @@ body {
   display: inline-block;
 }
 
+#new{
+  border: 3px solid #4B0082;
+  border-radius: 25px;
+  width: 300px;
+  height: 50px;
+  background-color: #BA55D3;
+  font-family: 'Aharoni', monospace;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+#new:hover{
+  background-color: #DA70D6;
+}
+
+#result{
+  width: 300px;
+  height: 50px;
+  font-family: 'Aharoni', monospace;
+  font-size: 40px;
+  text-align: center;
+}
+
 .row {
   font-size: 0px; /* ridade vahel*/
 }
@@ -16,6 +39,8 @@ body {
   display: inline-block;
   width: 40px;
   height: 40px;
+  font-family: 'Arial', monospace;
+  font-weight: bold;
   background-color: #1E90FF;
   border-right: 1px solid #D3D3D3;
   border-bottom: 1px solid #D3D3D3;
